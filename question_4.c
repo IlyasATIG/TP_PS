@@ -26,7 +26,7 @@ void execute_one_simple_command() {
         return; 
     }
 
-    // ***************** Q3 : if the command is "exit" *****************
+    // ***************** Q3 : if the command is "exit" ****************
     if (strcmp(buffer_command_line, "exit") == 0) {
         write(STDOUT_FILENO, BYE_MSG, strlen(BYE_MSG));
         exit(EXIT_SUCCESS);

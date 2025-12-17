@@ -2,7 +2,7 @@
 #include <unistd.h>
 #include <sys/wait.h>
 #include <stdlib.h>
-#include <stdio.h> // Nécessaire pour sprintf
+#include <stdio.h>
 #include <string.h>
 
 #define MAX_LINE_SIZE 1024
@@ -12,7 +12,7 @@ void execute_one_simple_command() {
     char buffer_command_line[MAX_LINE_SIZE] = {0};
     
     // Stock and read the characters
-    ssize_t nb_char_read = read(STDIN_FILENO, buffer_command_line, MAX_LINE_SIZE);
+    int nb_char_read = read(STDIN_FILENO, buffer_command_line, MAX_LINE_SIZE);
 
     // Remove the character of the line break "\n"
     buffer_command_line[nb_char_read-1] = '\0';

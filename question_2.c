@@ -28,14 +28,4 @@ void execute_one_simple_command() {
         execlp(buffer_command_line, buffer_command_line, NULL);
         exit(EXIT_FAILURE);
     }
-
-    /* Q4 
-    int status;
-    // Waiting for the Son
-    wait(&status);
-
-    if(WIFSIGNALED(status)){
-        printf("Killed by %d \n", WTERMSIG(status));
-    }
-    */
 }

@@ -49,7 +49,7 @@ void execute_one_simple_command() {
     // execvp need that the list ends with NULL
     argv[i] = NULL; 
 
-    // Si l'utilisateur a juste fait "Entrée" (ligne vide ou que des espaces)
+    // If the user just pressed “Enter” (blank line or only spaces)
     if (argv[0] == NULL) {
         return;
     }

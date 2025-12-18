@@ -59,6 +59,12 @@ void execute_one_simple_command() {
     clock_gettime(CLOCK_REALTIME, &start); 
 
 
+    /******** Q6 : DEBUG **********
+    for(int k=0; argv[k] != NULL; k++) {
+        printf("Argument[%d] : '%s'\n", k, argv[k]);
+    }
+    */
+
     // ***************** Q4 : Displaying return code *****************
     pid_t pid = fork();
 
